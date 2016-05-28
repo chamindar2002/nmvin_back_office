@@ -1,0 +1,6 @@
+pinnacleadmin 2012-02-20 01:28:39 HomePageAction_view2 127.0.0.1
+pinnacleadmin 2012-02-20 01:28:47 CustomerDetailsAction_form 127.0.0.1
+pinnacleadmin 2012-02-20 01:51:17 CustomerDetailsAction_form 127.0.0.1
+pinnacleadmin 2012-02-20 02:04:12 CustomerDetailsAction_form 127.0.0.1
+pinnacleadmin 2012-02-20 04:10:24 ReceiptsListAction_list 127.0.0.1
+pinnacleadmin 2012-02-20 04:33:54 CustomerDetailsAction_form 127.0.0.1

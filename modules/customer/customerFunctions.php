@@ -1,0 +1,321 @@
+<?php
+$searchCriteria = Array();
+
+$searchCriteria[0] = "Family Name";
+$searchCriteria[1] = "First Name";
+$searchCriteria[2] = "Passport Number";
+$searchCriteria[3] = "Email Address";
+$searchCriteria[4] = "Skype Address";
+$searchCriteria[5] = "Mobile Phone";
+$searchCriteria[6] = "Resdience Phone";
+
+function printSelectCriteria($selected){
+	global $searchCriteria;
+	echo "<select class='selectboxlarge' name='searchcriteria' id='searchcriteria'>";
+		foreach($searchCriteria As $key=>$value){
+			if($selected == $key){
+				echo "<option value=\"$key\" selected>$value</option>";
+			}else{
+				echo "<option value=\"$key\">$value</option>";
+			}
+		}
+	echo "</select>";
+}
+
+
+function showActionFileOutput($s){
+		for($i=0;$i<$s;$i++){
+	  		echo "$i<br>";
+	  	}
+	  	
+}
+
+$titles = Array(""=>"","DR"=>"Dr.","MR"=>"Mr.","MRS"=>"Mrs.","MISS"=>"Miss.","REV"=>"Rev.","M/S"=>"M/S",);
+
+function printTitles($selected){
+	global $titles;
+	echo "<select class='selectboxsmall' name='titles' id='titles'>";
+		foreach($titles As $key=>$value){
+			if($selected == $key){
+				echo "<option value=\"$key\" selected>$value</option>";
+			}else{
+				echo "<option value=\"$key\">$value</option>";
+			}
+		}
+	echo "</select>";
+}
+
+
+//$country_list = array("Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia",
+//		"Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin",
+//		"Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia",
+//		"Cameroon","Canada","Cape Verde","Central African Republic","Chad","Chile","China","Colombi","Comoros","Congo (Brazzaville)",
+//		"Congo","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica",
+//		"Dominican Republic","East Timor (Timor Timur)","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia",
+//		"Ethiopia","Fiji","Finland","France","Gabon","Gambia, The","Georgia","Germany","Ghana","Greece","Grenada",
+//		"Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran",
+//		"Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Korea, North",
+//		"Korea, South","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon",	"Lesotho","Liberia","Libya","Liechtenstein",
+//		"Lithuania","Luxembourg","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands",
+//		"Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Morocco","Mozambique","Myanmar",
+//		"Namibia","Nauru",	"Nepa","Netherlands","New Zealand",	"Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan",
+//		"Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania",
+//		"Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe",
+//		"Saudi Arabia",	"Senegal","Serbia and Montenegro","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia",
+//		"Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Sudan","Suriname","Swaziland","Sweden","Switzerland",
+//		"Syria","Taiwan","Tajikistan","Tanzania","Thailand","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey",
+//		"Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan",
+//		"Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe");
+$country_list = array("AF"=>"AFGHANISTAN",
+"AX"=>"ALAND ISLANDS",
+"AL"=>"ALBANIA",
+"DZ"=>"ALGERIA",
+"AS"=>"AMERICAN SAMOA",
+"AD"=>"ANDORRA",
+"AO"=>"ANGOLA",
+"AI"=>"ANGUILLA",
+"AQ"=>"ANTARCTICA",
+"AG"=>"ANTIGUA AND BARBUDA",
+"AR"=>"ARGENTINA",
+"AM"=>"ARMENIA",
+"AW"=>"ARUBA",
+"AU"=>"AUSTRALIA",
+"AT"=>"AUSTRIA",
+"AZ"=>"AZERBAIJAN",
+"BS"=>"BAHAMAS",
+"BH"=>"BAHRAIN",
+"BD"=>"BANGLADESH",
+"BB"=>"BARBADOS",
+"BY"=>"BELARUS",
+"BE"=>"BELGIUM",
+"BZ"=>"BELIZE",
+"BJ"=>"BENIN",
+"BM"=>"BERMUDA",
+"BT"=>"BHUTAN",
+"BO"=>"BOLIVIA",
+"BA"=>"BOSNIA AND HERZEGOVINA",
+"BW"=>"BOTSWANA",
+"BV"=>"BOUVET ISLAND",
+"BR"=>"BRAZIL",
+"IO"=>"BRITISH INDIAN OCEAN TERRITORY",
+"BN"=>"BRUNEI DARUSSALAM",
+"BG"=>"BULGARIA",
+"BF"=>"BURKINA FASO",
+"BI"=>"BURUNDI",
+"KH"=>"CAMBODIA",
+"CM"=>"CAMEROON",
+"CA"=>"CANADA",
+"CV"=>"CAPE VERDE",
+"CI"=>"CâTE D'IVOIRE",
+"KY"=>"CAYMAN ISLANDS",
+"CF"=>"CENTRAL AFRICAN REPUBLIC",
+"TD"=>"CHAD",
+"CL"=>"CHILE",
+"CN"=>"CHINA",
+"CX"=>"CHRISTMAS ISLAND",
+"CC"=>"COCOS (KEELING) ISLANDS",
+"CO"=>"COLOMBIA",
+"KM"=>"COMOROS",
+"CG"=>"CONGO",
+"CD"=>"CONGO, THE DEMOCRATIC REPUBLIC of THE",
+"CK"=>"COOK ISLANDS",
+"CR"=>"COSTA RICA",
+"HR"=>"CROATIA",
+"CU"=>"CUBA",
+"CY"=>"CYPRUS",
+"CZ"=>"CZECH REPUBLIC",
+"DK"=>"DENMARK",
+"DJ"=>"DJIBOUTI",
+"DM"=>"DOMINICA",
+"DO"=>"DOMINICAN REPUBLIC",
+"EC"=>"ECUADOR",
+"EG"=>"EGYPT",
+"SV"=>"EL SALVADOR",
+"GQ"=>"EQUATORIAL GUINEA",
+"ER"=>"ERITREA",
+"EE"=>"ESTONIA",
+"ET"=>"ETHIOPIA",
+"FK"=>"FALKLAND ISLANDS (MALVINAS)",
+"FO"=>"FAROE ISLANDS",
+"FJ"=>"FIJI",
+"FI"=>"FINLAND",
+"FR"=>"FRANCE",
+"GF"=>"FRENCH GUIANA",
+"PF"=>"FRENCH POLYNESIA",
+"TF"=>"FRENCH SOUTHERN TERRITORIES",
+"GA"=>"GABON",
+"GM"=>"GAMBIA",
+"GE"=>"GEORGIA",
+"DE"=>"GERMANY",
+"GH"=>"GHANA",
+"GI"=>"GIBRALTAR",
+"GR"=>"GREECE",
+"GL"=>"GREENLAND",
+"GD"=>"GRENADA",
+"GP"=>"GUADELOUPE",
+"GU"=>"GUAM",
+"GT"=>"GUATEMALA",
+"GN"=>"GUINEA",
+"GW"=>"GUINEA-BISSAU",
+"GY"=>"GUYANA",
+"HT"=>"HAITI",
+"HM"=>"HEARD ISLAND AND MCDONALD ISLANDS",
+"VA"=>"HOLY SEE (VATICAN CITY STATE)",
+"HN"=>"HONDURAS",
+"HK"=>"HONG KONG",
+"HU"=>"HUNGARY",
+"IS"=>"ICELAND",
+"IN"=>"INDIA",
+"ID"=>"INDONESIA",
+"IR"=>"IRAN ISLAMIC REPUBLIC of",
+"IQ"=>"IRAQ",
+"IE"=>"IRELAND",
+"IL"=>"ISRAEL",
+"IT"=>"ITALY",
+"JM"=>"JAMAICA",
+"JP"=>"JAPAN",
+"JO"=>"JORDAN",
+"KZ"=>"KAZAKHSTAN",
+"KE"=>"KENYA",
+"KI"=>"KIRIBATI",
+"KP"=>"KOREA DEMOCRATIC PEOPLE\'S REPUBLIC of",
+"KR"=>"KOREA REPUBLIC of",
+"KW"=>"KUWAIT",
+"KG"=>"KYRGYZSTAN",
+"LA"=>"LAO PEOPLE\'S DEMOCRATIC REPUBLIC",
+"LV"=>"LATVIA",
+"LB"=>"LEBANON",
+"LS"=>"LESOTHO",
+"LR"=>"LIBERIA",
+"LY"=>"LIBYAN ARAB JAMAHIRIYA",
+"LI"=>"LIECHTENSTEIN",
+"LT"=>"LITHUANIA",
+"LU"=>"LUXEMBOURG",
+"MO"=>"MACAO",
+"MK"=>"MACEDONIA, THE FORMER YUGOSLAV REPUBLIC of",
+"MG"=>"MADAGASCAR",
+"MW"=>"MALAWI",
+"MY"=>"MALAYSIA",
+"MV"=>"MALDIVES",
+"ML"=>"MALI",
+"MT"=>"MALTA",
+"MH"=>"MARSHALL ISLANDS",
+"MQ"=>"MARTINIQUE",
+"MR"=>"MAURITANIA",
+"MU"=>"MAURITIUS",
+"YT"=>"MAYOTTE",
+"MX"=>"MEXICO",
+"FM"=>"MICRONESIA, FEDERATED STATES of",
+"MD"=>"MOLDOVA, REPUBLIC of",
+"MC"=>"MONACO",
+"MN"=>"MONGOLIA",
+"MS"=>"MONTSERRAT",
+"MA"=>"MOROCCO",
+"MZ"=>"MOZAMBIQUE",
+"MM"=>"MYANMAR",
+"NA"=>"NAMIBIA",
+"NR"=>"NAURU",
+"NP"=>"NEPAL",
+"NL"=>"NETHERLANDS",
+"AN"=>"NETHERLANDS ANTILLES",
+"NC"=>"NEW CALEDONIA",
+"NZ"=>"NEW ZEALAND",
+"NI"=>"NICARAGUA",
+"NE"=>"NIGER",
+"NG"=>"NIGERIA",
+"NU"=>"NIUE",
+"NF"=>"NORFOLK ISLAND",
+"MP"=>"NORTHERN MARIANA ISLANDS",
+"NO"=>"NORWAY",
+"OM"=>"OMAN",
+"PK"=>"PAKISTAN",
+"PW"=>"PALAU",
+"PS"=>"PALESTINIAN TERRITORY, OCCUPIED",
+"PA"=>"PANAMA",
+"PG"=>"PAPUA NEW GUINEA",
+"PY"=>"PARAGUAY",
+"PE"=>"PERU",
+"PH"=>"PHILIPPINES",
+"PN"=>"PITCAIRN",
+"PL"=>"POLAND",
+"PT"=>"PORTUGAL",
+"PR"=>"PUERTO RICO",
+"QA"=>"QATAR",
+"RE"=>"REUNION",
+"RO"=>"ROMANIA",
+"RU"=>"RUSSIAN FEDERATION",
+"RW"=>"RWANDA",
+"SH"=>"SAINT HELENA",
+"KN"=>"SAINT KITTS AND NEVIS",
+"LC"=>"SAINT LUCIA",
+"PM"=>"SAINT PIERRE AND MIQUELON",
+"VC"=>"SAINT VINCENT AND THE GRENADINES",
+"WS"=>"SAMOA",
+"SM"=>"SAN MARINO",
+"ST"=>"SAO TOME AND PRINCIPE",
+"SA"=>"SAUDI ARABIA",
+"SN"=>"SENEGAL",
+"CS"=>"SERBIA AND MONTENEGRO",
+"SC"=>"SEYCHELLES",
+"SL"=>"SIERRA LEONE",
+"SG"=>"SINGAPORE",
+"SK"=>"SLOVAKIA",
+"SI"=>"SLOVENIA",
+"SB"=>"SOLOMON ISLANDS",
+"SO"=>"SOMALIA",
+"ZA"=>"SOUTH AFRICA",
+"GS"=>"SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS",
+"ES"=>"SPAIN",
+"LK"=>"SRI LANKA",
+"SD"=>"SUDAN",
+"SR"=>"SURINAME",
+"SJ"=>"SVALBARD AND JAN MAYEN",
+"SZ"=>"SWAZILAND",
+"SE"=>"SWEDEN",
+"CH"=>"SWITZERLAND",
+"SY"=>"SYRIAN ARAB REPUBLIC",
+"TW"=>"TAIWAN PROVINCE of CHINA",
+"TJ"=>"TAJIKISTAN",
+"TZ"=>"TANZANIA UNITED REPUBLIC of",
+"TH"=>"THAILAND",
+"TL"=>"TIMOR-LESTE",
+"TG"=>"TOGO",
+"TK"=>"TOKELAU",
+"TO"=>"TONGA",
+"TT"=>"TRINIDAD AND TOBAGO",
+"TN"=>"TUNISIA",
+"TR"=>"TURKEY",
+"TM"=>"TURKMENISTAN",
+"TC"=>"TURKS AND CAICOS ISLANDS",
+"TV"=>"TUVALU",
+"UG"=>"UGANDA",
+"UA"=>"UKRAINE",
+"AE"=>"UNITED ARAB EMIRATES",
+"GB"=>"UNITED KINGDOM",
+"US"=>"UNITED STATES",
+"UM"=>"UNITED STATES MINOR OUTLYING ISLANDS",
+"UY"=>"URUGUAY",
+"UZ"=>"UZBEKISTAN",
+"VU"=>"VANUATU",
+"VE"=>"VENEZUELA",
+"VN"=>"VIETNAM",
+"VG"=>"VIRGIN ISLANDS BRITISH",
+"VI"=>"VIRGIN ISLANDS U.S.",
+"WF"=>"WALLIS AND FUTUNA",
+"EH"=>"WESTERN SAHARA",
+"YE"=>"YEMEN",
+"ZM"=>"ZAMBIA",
+"ZW"=>"ZIMBABWE"); 
+function printCountries($selectd){
+	global $country_list;
+	echo "<select class='selectbox' name='countries' id='countries'>";
+		foreach($country_list As $key=>$value){
+			if($selectd == $key){
+				echo "<option value=\"$key\" selected>$value</option>";
+			}else{
+				echo "<option value=\"$key\">$value</option>";
+			}
+		}
+	echo "</select>";
+}
+?>

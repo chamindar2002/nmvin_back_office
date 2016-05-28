@@ -1,0 +1,3 @@
+admin 2015-07-26 09:22:25 ReceiptsListAction_list 127.0.0.1
+admin 2015-07-26 09:22:39 ReceiptsListAction_list 127.0.0.1
+admin 2015-07-26 09:22:43 PrintReceiptAction_print 127.0.0.1

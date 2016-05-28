@@ -1,0 +1,2 @@
+pinnacleadmin 2012-04-09 04:24:04 HomePageAction_view2 127.0.0.1
+pinnacleadmin 2012-04-09 04:24:07 SalesListAction_list 127.0.0.1

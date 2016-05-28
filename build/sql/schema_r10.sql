@@ -1,0 +1,2 @@
+ALTER TABLE `nmwndb`.`user` MODIFY COLUMN `loginname` VARCHAR(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL COMMENT 'User Name',
+ MODIFY COLUMN `deleted` TINYINT(4) NOT NULL DEFAULT 0 COMMENT 'Delete Status';

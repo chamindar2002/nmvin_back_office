@@ -1,0 +1,1 @@
+ALTER TABLE `nmwndb`.`customerdetails` ADD COLUMN `onlineuserid` INTEGER DEFAULT 0 COMMENT 'user id for online users' AFTER `slcontactperson`;

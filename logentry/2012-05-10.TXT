@@ -1,0 +1,9 @@
+admin 2012-05-10 09:20:20 HomePageAction_view2 127.0.0.1
+admin 2012-05-10 09:20:22 ProjectListAction_list 127.0.0.1
+admin 2012-05-10 09:20:24 RefundedBlocksListAction_list 127.0.0.1
+admin 2012-05-10 09:20:26 ChangeUserPasswordAction_form 127.0.0.1
+admin 2012-05-10 09:20:28 CustomerDetailsAction_form 127.0.0.1
+admin 2012-05-10 09:20:30 AddNewCustomerAction_form 127.0.0.1
+admin 2012-05-10 09:22:25 AddNewCustomerAction_form 127.0.0.1
+admin 2012-05-10 09:22:28 SalesListAction_list 127.0.0.1
+admin 2012-05-10 09:22:30 ReceiptsListAction_list 127.0.0.1

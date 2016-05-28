@@ -1,0 +1,5 @@
+admin 2015-07-23 10:26:07 HomePageAction_view2 127.0.0.1
+admin 2015-07-23 10:26:14 HomePageAction_view 127.0.0.1
+admin 2015-07-23 10:26:15 ReceiptsListAction_list 127.0.0.1
+admin 2015-07-23 10:26:28 ReceiptsListAction_list 127.0.0.1
+admin 2015-07-23 10:26:32 PrintReceiptAction_print 127.0.0.1

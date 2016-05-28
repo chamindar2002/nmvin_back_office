@@ -1,0 +1,1 @@
+ALTER TABLE `nmwndb`.`sales` ADD COLUMN `saletype` TINYINT NOT NULL DEFAULT 0 COMMENT '0:office,1:online' AFTER `agrementfinishdate`;

@@ -1,0 +1,127 @@
+body{background: #f1f1f1;}
+.container{width:100%;height:auto;margin-top:10px;	background:#DCF2EC;}
+
+.contenttable{margin:1%; width:98%;	height:auto;	padding:5px;	background:#8AD4C1;	border:2px solid #9BAAA6;}
+.datatable{border-collapse:collapse;width:100%;}
+.formstable{width:100%; color:#24478F;}
+.printviewtable{width:100%;background:#FFFFFF; font-size:13px; border:1px dotted;}
+.tblwithborder{border:1px dotted #456A60;}
+
+.selectbox{  background: transparent;   width: 40%;   padding: 1px;      font-size: 13px;   border: 1px solid #456A60;   }
+.selectboxsmall{  background: transparent;   width: 35%;   padding: 1px; font-size: 13px;   border: 1px solid #456A60;   }
+.selectboxlarge{  background: transparent;   width: 80%;   padding: 1px; font-size: 13px;   border: 1px solid #456A60;   }
+
+
+.textboxlarge{background: transparent;  width: 80%;  padding: 1px;    font-size: 13px;   border: 1px solid #456A60;}
+.textboxmedium{background: transparent; width: 40%;  padding: 1px;    font-size: 13px;   border: 1px solid #456A60;}
+.textboxsmall{background: transparent;  width: 35%;  padding: 1px;    font-size: 13px;   border: 1px solid #456A60;}
+
+.reqtextboxlarge{background: #CCFFFF;   width: 80%;  padding: 1px;    font-size: 13px;   border: 1px solid #456A60;}
+.reqtextboxmedium{background: #CCFFFF;  width: 40%;  padding: 1px;    font-size: 13px;   border: 1px solid #456A60;}
+.reqtextboxsmall{background: #CCFFFF;   width: 35%;  padding: 1px;    font-size: 13px;   border: 1px solid #456A60;}
+
+.datepicker{background: transparent; width: 40%;  padding: 1px;    font-size: 13px;   border: 1px solid #456A60;}
+
+.gridtextboxlarge{background:#ffffff;  width: 80%;  padding: 1px;    font-size: 13px;   border: 2px solid #456A60;}
+.gridtextboxmedium{background:#D6FFEB; width: 40%;  padding: 1px;    font-size: 13px;   border: 2px solid #456A60;}
+.gridtextboxsmall{background:#D6FFEB;  width: 35%;  padding: 1px;    font-size: 13px;   border: 2px solid #456A60;}
+
+.buttontype1{background:width:100px; background:url("../images/btn1_background.gif") repeat-x;  color:#ffffff; font-size:12px; border:3px solid #EBF5FF; font-family:sans-serif;}
+.buttontype2{background:#fffffc;width:100px;}
+#buttontype1{background:width:100px; background:url("../images/btn1_background.gif") repeat-x;  color:#ffffff; font-size:12px; border:3px solid #EBF5FF; font-family:sans-serif;}
+
+.rowodd{background:#F7FBFF;cursor:pointer;}
+.roweven{background:#DEE2E6;cursor:pointer;}
+.justrow{cursor:pointer;}
+
+#docoratedAnchotag1{text-decoration:none; background-color:#9BB3CC;padding:0.2em 0.6em;}
+
+table{font-size:12px;font-family:sans-serif;}
+b{color:#ffffff;}
+hr{color: #456A60;}
+
+
+.message_success{
+text-align:center;width:100%;height:20px;background:url(../images/success_background.gif) repeat-x;color:#09763F;border:1px solid #2EB82E;font-size:12px; font-family:sans-serif; padding-top:2px;}
+.message_error{
+text-align:center;width:100%;height:20px;background:url(../images/error_background.gif) repeat-x; color:#FFFFFF;border:1px solid #B20000;font-size:12px; font-family:sans-serif; padding-top:2px;}
+
+.submenu1{float:left;	width:100%;	padding:0;	margin:0;	list-style-type:none;}
+.submenu1 a{float:left;width:auto;text-decoration:none;color:white; font-weight:bold; font-size:14px;background-color:#9BB3CC;padding:0.2em 0.6em;border-right:1px solid white;}
+.submenu1 li {display:inline;}
+.submenu1 a:hover {background-color:#000;}
+
+#spanrpt{margin-top:5px;padding:5px;width:95%;border-top: 1px solid #456A60;border-left: 1px solid #456A60;	border-right: 1px solid #456A60;}
+#spanrpt_last{margin-top:5px;padding:5px;width:95%;border: 1px solid #456A60;}
+
+#nostyles_anchor{
+ text-decoration:none;
+ color:#8F8F8F;
+}
+
+
+
+ /*-----------statement print settings----------*/
+
+#tblprintdata{
+ border:1px solid #000000;
+}
+
+#tdleft{
+	border-right:1px solid #000000;
+}
+
+#tdbordertop{
+	
+/*----------------------------------------------*/	
+	border-top:1px solid #000000;
+}
+
+.divroundedcorders{/*    margin-top: 1%;*/    margin:0 auto;    margin-top:5%;    border:2px solid #0097d7;    padding:5px 5px;     background:#ffffff;    width:25%;    border-radius:25px;/*    color: #199A19;*/    font-weight: bold;    -moz-border-radius:5px; /* Firefox 3.6 and earlier */        box-shadow: 5px 5px 5px #888888;}
+
+.divroundedcorders2{/*    margin-top: 1%;*/   margin:0 auto;    margin-top:1%;    border:2px solid #0097d7;    padding:5px 5px;     background:#eef8fc;    width:80%;    border-radius:25px;/*    color: #199A19;*/    font-weight: bold;    -moz-border-radius:5px; /* Firefox 3.6 and earlier */    /*    box-shadow: 5px 5px 5px #888888;*/}
+
+.divroundedcorders3{/*    margin-top: 1%;*/   font-family:sans-serif; font-size:12px; color:#0097d7; margin:0 auto;    margin-top:1%;    border:1px dotted #0097d7;    padding:5px 5px;     background:#eef8fc;    width:80%;    border-radius:25px;/*    color: #199A19;*/      -moz-border-radius:5px; /* Firefox 3.6 and earlier */    /*    box-shadow: 5px 5px 5px #888888;*/}
+
+.divroundedcorders4{/*    margin-top: 1%;*/   font-family:sans-serif; font-size:12px; color:#0097d7; margin:0 auto;    margin-top:3px;    border:0px solid #0097d7;    padding:5px 5px;     background:#ffffff;    width:80%; /*    color: #199A19;*/}
+
+.divroundedcorders5{/*    margin-top: 1%;*/   font-family:sans-serif; font-size:12px; color:#000000; margin:0 auto;    margin-top:3px;    border:1px solid #cccccc;    padding:5px 5px;     background:#ffffff;    width:80%; /*    color: #199A19;*/}
+
+#validation_messages_div{
+    margin:0 auto;
+    margin-top:5px;
+    width: 80%;
+    background: #FFEBEB;
+    
+    color:#FF3300;
+    font-family:sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    padding:5px 5px;
+     border:1px dotted #991F00;  
+    border-radius:25px;/*    color: #199A19;*/      -moz-border-radius:5px;
+    text-align: center;
+    
+}
+
+#validation_messages_div2{
+    margin:0 auto;
+    margin-top:5px;
+    width: 80%;
+    background: #B2FFCC;
+    color:#009900;
+    font-family:sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    padding:5px 5px;
+    border:1px dotted #006600;  
+    border-radius:25px;/*    color: #199A19;*/      -moz-border-radius:5px;
+    text-align: center;
+}
+
+#spantitle{
+    font-family:sans-serif;
+    font-size:14px;
+    color:#000000;
+    margin-bottom:5px;
+}

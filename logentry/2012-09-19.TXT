@@ -1,0 +1,2 @@
+pinnacleadmin 2012-09-19 01:30:24 HomePageAction_view 127.0.0.1
+pinnacleadmin 2012-09-19 01:30:36 LogoutAction_success 127.0.0.1

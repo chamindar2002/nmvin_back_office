@@ -1,0 +1,33 @@
+.container{width:100%;height:auto;margin-top:10px;	background:#EBF5FF;}
+
+.contenttable{margin:1%; width:98%;	height:auto;	padding:5px;	background:#C2E0FF;	border:2px solid #D4DCE6;}
+.datatable{border-collapse:collapse;width:100%;}
+.formstable{width:100%; color:#24478F;}
+.printviewtable{width:100%;background:#FFFFFF; font-size:13px; border:1px dotted;}
+
+.selectbox{  background: transparent;   width: 268px;   padding: 1px;      font-size: 13px;   border: 1px solid #99C2FF;   }
+.selectboxsmall{  background: transparent;   width: 134px;   padding: 1px; font-size: 13px;   border: 1px solid #99C2FF;   }
+.selectboxlarge{  background: transparent;   width: 668px;   padding: 1px; font-size: 13px;   border: 1px solid #99C2FF;   }
+
+
+.textboxlarge{background: transparent;  width: 700px;  padding: 1px;    font-size: 13px;   border: 1px solid #99C2FF;}
+.textboxmedium{background: transparent; width: 350px;  padding: 1px;    font-size: 13px;   border: 1px solid #99C2FF;}
+.textboxsmall{background: transparent;  width: 175px;  padding: 1px;    font-size: 13px;   border: 1px solid #99C2FF;}
+
+.reqtextboxlarge{background: #CCFFFF;   width: 700px;  padding: 1px;    font-size: 13px;   border: 1px solid #99C2FF;}
+.reqtextboxmedium{background: #CCFFFF;  width: 350px;  padding: 1px;    font-size: 13px;   border: 1px solid #99C2FF;}
+.reqtextboxsmall{background: #CCFFFF;   width: 175px;  padding: 1px;    font-size: 13px;   border: 1px solid #99C2FF;}
+
+.buttontype1{background:#99C2FF;width:100px;}
+.buttontype2{background:#fffffc;width:100px;}
+
+.rowodd{background:#F7FBFF;cursor:pointer;}
+.roweven{background:#DEE2E6;cursor:pointer;}
+
+table{font-size:12px;font-family:sans-serif;}
+b{color:#ffffff;}
+
+.message_success{
+text-align:center;width:100%;height:20px;background:#D6FFD6;color:#2EB82E;border:1px solid #2EB82E;font-size:14px;}
+.message_error{
+text-align:center;width:100%;height:20px;background:#FFD6CC;color:#B20000;border:1px solid #B20000;font-size:14px;}

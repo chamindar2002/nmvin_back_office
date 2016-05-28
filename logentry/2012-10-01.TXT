@@ -1,0 +1,17 @@
+admin 2012-10-01 01:38:26 HomePageAction_view2 127.0.0.1
+admin 2012-10-01 01:38:31 HomePageAction_view 127.0.0.1
+admin 2012-10-01 01:38:49 ReportsAction_list 127.0.0.1
+admin 2012-10-01 01:39:11 PaymentsOverdueReportAction_print 127.0.0.1
+admin 2012-10-01 01:40:19 ReportsAction_list 127.0.0.1
+admin 2012-10-01 01:40:43 ReportsAction_list 127.0.0.1
+admin 2012-10-01 01:40:58 ReportsAction_list 127.0.0.1
+admin 2012-10-01 01:42:57 PaymentsOverdueReportAction_print 127.0.0.1
+admin 2012-10-01 01:43:21 ReportsAction_list 127.0.0.1
+admin 2012-10-01 01:47:24 ReportsAction_list 127.0.0.1
+admin 2012-10-01 01:47:37 PaymentsOverdueReportAction_print 127.0.0.1
+admin 2012-10-01 01:54:13 PaymentsOverdueReportAction_print 127.0.0.1
+admin 2012-10-01 01:54:30 PaymentsOverdueReportAction_print 127.0.0.1
+admin 2012-10-01 02:04:52 PaymentsOverdueReportAction_print 127.0.0.1
+admin 2012-10-01 02:05:08 PaymentsOverdueReportAction_print 127.0.0.1
+admin 2012-10-01 02:05:11 ReportsAction_list 127.0.0.1
+admin 2012-10-01 02:05:17 PaymentsOverdueReportAction_print 127.0.0.1

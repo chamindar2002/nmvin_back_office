@@ -1,0 +1,10 @@
+admin 2015-08-03 11:55:41 HomePageAction_view2 127.0.0.1
+admin 2015-08-03 11:55:45 ReceiptsListAction_list 127.0.0.1
+admin 2015-08-03 11:55:47 AddNewReceiptAction_form 127.0.0.1
+admin 2015-08-03 11:55:53 AddNewReceiptAction_form 127.0.0.1
+admin 2015-08-03 11:56:48 AddNewReceiptAction_form 127.0.0.1
+admin 2015-08-03 11:57:23 AddNewReceiptAction_form 127.0.0.1
+admin 2015-08-03 11:59:52 AddNewReceiptAction_form 127.0.0.1
+admin 2015-08-03 12:01:33 AddNewReceiptAction_form 127.0.0.1
+admin 2015-08-03 12:02:07 HomePageAction_view 127.0.0.1
+admin 2015-08-03 12:32:02 HomePageAction_view 127.0.0.1

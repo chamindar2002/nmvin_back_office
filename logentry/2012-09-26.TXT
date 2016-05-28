@@ -1,0 +1,10 @@
+guest 2012-09-26 02:29:58 OnlineGuestHomeAction_form 127.0.0.1
+guest 2012-09-26 02:30:00 CustomerLogoutAction_success 127.0.0.1
+admin 2012-09-26 02:30:28 HomePageAction_view2 127.0.0.1
+admin 2012-09-26 02:30:33 HomePageAction_view 127.0.0.1
+admin 2012-09-26 02:30:38 VoidedReceiptsListAction_list 127.0.0.1
+admin 2012-09-26 02:30:40 ReceiptsListAction_list 127.0.0.1
+admin 2012-09-26 02:30:50 ReceiptsListAction_list 127.0.0.1
+admin 2012-09-26 02:56:50 LogoutAction_success 127.0.0.1
+admin 2012-09-26 04:22:34 HomePageAction_view2 127.0.0.1
+admin 2012-09-26 04:22:39 HomePageAction_view 127.0.0.1

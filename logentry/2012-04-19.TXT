@@ -1,0 +1,9 @@
+pinnacleadmin 2012-04-19 11:59:59 HomePageAction_view2 127.0.0.1
+pinnacleadmin 2012-04-19 12:00:03 ReceiptsListAction_list 127.0.0.1
+pinnacleadmin 2012-04-19 12:00:13 ReceiptsListAction_list 127.0.0.1
+pinnacleadmin 2012-04-19 12:00:34 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-19 12:03:52 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-19 12:07:42 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-19 12:09:47 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-19 12:15:27 ReceiptsListAction_list 127.0.0.1
+pinnacleadmin 2012-04-19 12:15:30 PrintReceiptAction_print 127.0.0.1

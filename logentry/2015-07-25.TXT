@@ -1,0 +1,12 @@
+admin 2015-07-25 10:38:25 HomePageAction_view2 127.0.0.1
+admin 2015-07-25 10:38:31 ReportsAction_list 127.0.0.1
+admin 2015-07-25 10:50:02 SearchAction_list 127.0.0.1
+admin 2015-07-25 10:50:22 ListRolesAction_list 127.0.0.1
+admin 2015-07-25 10:50:26 EditRoleAction_form 127.0.0.1
+admin 2015-07-25 10:50:35 EditRoleAction_success 127.0.0.1
+admin 2015-07-25 10:50:35 ListRolesAction_list 127.0.0.1
+admin 2015-07-25 10:50:40 AddressLabelsReportAction_print 127.0.0.1
+admin 2015-07-25 11:01:14 ReportsAction_list 127.0.0.1
+admin 2015-07-25 11:50:34 ReportsAction_list 127.0.0.1
+admin 2015-07-25 11:53:24 ReportsAction_list 127.0.0.1
+admin 2015-07-25 11:59:24 BlockAllocationDetailReportAction_print 127.0.0.1

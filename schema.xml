@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<database name="nmwndb" defaultIdMethod="native">
+
+	<table name="user" description="User">
+		  <column name="uid" type="integer" autoIncrement="true" required="true" primaryKey="true" description="User ID"/>
+		  <column name="enabled" type="boolean" required="true" description="User is enabled"/>
+		  <column name="loginname" type="varchar" size="200" required="true" description="User Name"/>
+		  <column name="familyname" type="varchar" size="200" required="true" description="Family Name"/>
+		  <column name="firstname" type="varchar" size="200" required="true" description="First Name"/>
+		  <column name="password" type="varchar" size="32" required="true" description="Password"/>
+		  <column name="deleted" type="boolean" required="false" default="false" description="Delete Status"/>
+		  <unique>
+     		<unique-column name="loginname"/>
+     	</unique>
+ 	</table>
+ 	
+ 	<table name="role" description="User Role">
+		  <column name="rid" type="integer" autoIncrement="true" required="true" primaryKey="true" description="Role ID"/>
+		  <column name="name" type="varchar" size="20" required="true" description="Role Name"/>
+		  <column name="description" type="varchar" size="150" required="true" description="Description"/>
+		  <unique>
+     		<unique-column name="name"/>
+     	</unique>
+ 	</table>
+	 	
+	<table name="action_permission" description="Action Permission">
+			  <column name="id" type="integer" autoIncrement="true" required="true" primaryKey="true" description="Action ID"/>
+			  <column name="module" type="varchar" size="50" required="true" description="Module"/>
+			  <column name="action" type="varchar" size="100" required="true" description="Action Name"/>
+			  <column name="description" type="varchar" size="150" required="true" description="Description"/>
+			  <column name="systemid" type="integer" required="true" default="0" description="System ID Number"/>
+			  <unique>
+			  	<unique-column name="module"/>
+	     		<unique-column name="action"/>
+	     	</unique>
+	</table>
+	 	
+	<table name="user_role_ref" description="User - Role Mapping">
+	 		<column name="uid" type="INTEGER" required="true" primaryKey="true"/>
+	 		<column name="rid" type="INTEGER" required="true" primaryKey="true"/>
+	 		<foreign-key foreignTable="user">
+	   			<reference 	local="uid"  foreign="uid"/>
+	 		</foreign-key>
+	 		<foreign-key foreignTable="role">
+	   			<reference
+	     			local="rid"
+	     			foreign="rid"/>
+	 			</foreign-key>
+	</table>
+	 	
+	 	<table name="role_action_permission_ref" description="Role - Action_Permission Mapping">
+	 		<column name="rid" type="INTEGER" required="true" primaryKey="true"/>
+	 		<column name="aid" type="INTEGER" required="true" primaryKey="true"/>
+	 		<foreign-key foreignTable="role">
+	   			<reference
+	     			local="rid"
+	     			foreign="rid"/>
+	 			</foreign-key>
+	 		<foreign-key foreignTable="action_permission">
+	   			<reference
+	     			local="aid"
+	     			foreign="id"/>
+	 			</foreign-key>
+		</table>	
+				
+	 	<!-- End: User, authentication and authorization --> 
+        <!-- ############################  ############################## ########################### -->    
+        <!-- ############################  Starting Raw Materia  Data set ########################### -->  
+        <!-- ############################  ############################## ########################### -->
+        
+        
+        <!-- ############################ Location table #############################################-->
+         <table name="location" description="project location">
+
+		  <column name="locationcode" type="integer" autoIncrement="true" required="true" primaryKey="true" description="Location Code"/>	 
+		  <column name="locationname" type="varchar" size="100" required="true" description="Location Name"/>
+		  <column name="locationcity" type="varchar" size="100" required="true" description="City Of Project Location"/>
+		  		  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+          <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		  
+		  <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		 
+		</table>
+        
+        
+         <!-- ############################ Project table ####################################-->
+         <table name="project" description="projects">
+
+		  <column name="projectcode" type="integer" autoIncrement="true" required="true" primaryKey="true" description="Project Code"/>	 
+		  <column name="locationcode" type="integer" required="true" description="Location Code"/>
+		  <column name="projectname" type="varchar" size="100" required="true" description="Project Name"/>
+		  <column name="nofblocks" type="integer" required="false" description="No.of blocks in project"/>
+		  		  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+          <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		  
+		  <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		 
+		   <foreign-key foreignTable="location">
+   			<reference
+     			local="locationcode"
+     			foreign="locationcode"/>
+ 		  </foreign-key>	
+		</table>
+        
+	     <!-- ############################ Customer Details table ###############################-->
+         <table name="customerdetails" description="customer details">
+
+		  <column name="customercode" type="integer" autoIncrement="true" required="true" primaryKey="true" description="Customer Code"/>
+		  <column name="title" type="varchar" size="10" required="false" description="Title"/>
+		  <column name="familyname" type="varchar" size="100" required="true" description="family name"/>
+		  <column name="firstname" type="varchar" size="100" required="true" description="first name"/>
+		  
+		  <column name="addressline1" type="varchar" size="100" required="true" description="Address Line1"/>
+		  <column name="addressline2" type="varchar" size="100" required="true" description="Address Line2"/>
+		  <column name="postcode" type="varchar" size="20" required="true" description="Post Code"/>
+		  <column name="country" type="varchar" size="50" required="true" description="Country"/>	 
+		  
+		  <column name="email" type="varchar" size="100" required="true" description="Email"/>
+		  <column name="Skype" type="varchar" size="100" required="false" description="Skype Id"/>
+		  <column name="landline" type="varchar" size="100" required="true" description="Land Phone No"/>
+		  <column name="mobile" type="varchar" size="100" required="false" description="Mobile phone No"/>
+		  <column name="workphone" type="varchar" size="100" required="false" description="Office Phone No"/>
+		  <column name="fax" type="varchar" size="100" required="false" description="fax No"/>
+		  
+		  <column name="proffession" type="varchar" size="100" required="false" description="proffession"/>
+		  <column name="gender" type="varchar" size="10" required="false" description="gender"/>
+		  <column name="passportno" type="varchar" size="100" required="true" description="Passport No"/>
+		  
+		  <column name="sladdressline1" type="varchar" size="100" required="true" description="Address In SL L1"/>
+		  <column name="sladdressline2" type="varchar" size="100" required="true" description="Address In SL L2"/>
+		  <column name="sladdressline3" type="varchar" size="100" required="true" description="Address In SL L3 / city"/>
+		  <column name="sllandline" type="varchar" size="100" required="true" description="Land Phone No in SL"/>
+		  <column name="slmobile" type="varchar" size="100" required="false" description="Mobile phone No in SL"/>
+		  <column name="slcontactperson" type="varchar" size="100" required="true" description="Contact Person In SL"/>
+                  <column name="onlineuserid" type="integer" required="false" default="0" description="user id for online users"/>
+		  		  		  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+          <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		  
+		  <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		 
+		</table>
+                
+                
+                <table name="onlinecustomer" description="onlinecustomer">
+
+		  <column name="customercode" type="integer" autoIncrement="true" required="true" primaryKey="true" description="Customer Code"/>
+		  <column name="title" type="varchar" size="10" required="false" description="Title"/>
+		  <column name="familyname" type="varchar" size="100" required="true" description="family name"/>
+		  <column name="firstname" type="varchar" size="100" required="true" description="first name"/>
+		  
+		  <column name="addressline1" type="varchar" size="100" required="true" description="Address Line1"/>
+		  <column name="addressline2" type="varchar" size="100" required="true" description="Address Line2"/>
+		  <column name="postcode" type="varchar" size="20" required="true" description="Post Code"/>
+		  <column name="country" type="varchar" size="50" required="true" description="Country"/>	 
+		  
+		  <column name="email" type="varchar" size="100" required="true" description="Email"/>
+		  <column name="Skype" type="varchar" size="100" required="false" description="Skype Id"/>
+		  <column name="landline" type="varchar" size="100" required="true" description="Land Phone No"/>
+		  <column name="mobile" type="varchar" size="100" required="false" description="Mobile phone No"/>
+		  <column name="workphone" type="varchar" size="100" required="false" description="Office Phone No"/>
+		  <column name="fax" type="varchar" size="100" required="false" description="fax No"/>
+		  
+		  <column name="proffession" type="varchar" size="100" required="false" description="proffession"/>
+		  <column name="gender" type="varchar" size="10" required="false" description="gender"/>
+		  <column name="passportno" type="varchar" size="100" required="true" description="Passport No"/>
+		  
+		  <column name="sladdressline1" type="varchar" size="100" required="true" description="Address In SL L1"/>
+		  <column name="sladdressline2" type="varchar" size="100" required="true" description="Address In SL L2"/>
+		  <column name="sladdressline3" type="varchar" size="100" required="true" description="Address In SL L3 / city"/>
+		  <column name="sllandline" type="varchar" size="100" required="true" description="Land Phone No in SL"/>
+		  <column name="slmobile" type="varchar" size="100" required="false" description="Mobile phone No in SL"/>
+		  <column name="slcontactperson" type="varchar" size="100" required="true" description="Contact Person In SL"/>
+                  
+                  <column name="onlineuserid" type="integer" required="false" default="0" description="user id for online users"/>
+                  <column name="paymentsuccess" type="boolean" default="false" description="payment success"/>
+                  <column name="blockrefno" type="integer" default="0" description="Reserved Block Number"/>
+                  <column name="paidamt" type="float" default="0" description="Reservation charges"/>
+                  <column name="paidamtissuedreceiptstatus" type="boolean" default="false" description="A receipt added to customer receipts"/>
+                  <column name="utilized" type="boolean" default="false" description="Utilized for customerdetails File"/>
+  
+                  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+                  <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		  
+		  <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		 
+		</table>
+        
+         <!-- ############################ House Categories ####################################-->
+         <table name="housecategory" description="house category">
+
+		  <column name="housecatcode" type="integer" autoIncrement="true" required="true" primaryKey="true" description="house category Code"/>	 
+		  <column name="description" type="varchar" size="100" required="true" description="House description"/>
+		  <column name="price"  type="double" required="true" description="Price of house"/>
+		  		  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+          <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		  
+		  <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		 
+		</table>
+        
+        <!-- ############################ Project details table ####################################-->
+         <table name="projectdetails" description="project details">
+
+		  <column name="refno" type="integer" autoIncrement="true" required="true" primaryKey="true" description="Project details refno"/>	 
+		  
+		  <column name="locationcode" type="integer" required="true" description="Location Code"/>
+		  <column name="projectcode" type="integer" required="true" description="project code"/>
+		  <column name="customercode" type="integer" required="true" description="customer code"/>
+		  <column name="housecatcode" type="integer" required="true" description="house category code"/>
+		  
+		  <column name="blocknumber" type="varchar" size="100" required="true" description="block no"/>
+		  <column name="blocksize" type="double" required="true" description="size of block (percheses)"/>
+		  <column name="blockprice" type="double" required="true" description="price of block"/>
+		  
+		  <column name="reservedate" type="date" required="true" description="Date of reservation"/>
+		  <column name="reservestatus" type="integer" default="0" description="reservation status 0:unavailable,1:reserved,2:soldout,3:notforsale "/>
+		  
+		  <column name="paymentmethod" type="integer" required="true" description="method of payment 1=installmnet,2=bankloan,..."/>
+		  <column name="duedate" type="date" required="true" description="due date"/>
+		  		  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+          <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		  
+		  <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		 
+		   <foreign-key foreignTable="location">
+   			<reference
+     			local="locationcode"
+     			foreign="locationcode"/>
+ 		  </foreign-key>
+ 		  
+ 		   <foreign-key foreignTable="project">
+   			<reference
+     			local="projectcode"
+     			foreign="projectcode"/>
+ 		   </foreign-key>	
+ 		  
+ 		   <foreign-key foreignTable="customerdetails">
+   			<reference
+     			local="customercode"
+     			foreign="customercode"/>
+ 		  </foreign-key>	
+ 		   <foreign-key foreignTable="housecategory">
+   			<reference
+     			local="housecatcode"
+     			foreign="housecatcode"/>
+ 		  </foreign-key>		
+		</table>
+        
+        
+        <!-- ############################ customer receipts table ####################################-->
+         <table name="customerreceipts" description="customer payment receipts">
+
+		  <column name="receiptno" type="integer" autoIncrement="true" required="true" primaryKey="true" description="receipt number"/>	 
+		  
+		  <column name="salerefno" type="integer" required="true" description="sale reference number"/>
+		  <column name="locationcode" type="integer" required="true" description="Location Code"/>
+		  <column name="projectcode" type="integer" required="true" description="project code"/>
+		  <column name="customercode" type="integer" required="true" description="customer code"/>
+		  
+		  <column name="receiptdate" type="date" required="true" description="receipt date"/>
+		  <column name="oldreceiptno" type="varchar" size="20" description="Receipt Book Number"/>
+		  <column name="blocknumber" type="integer" required="true" description="block no"/>
+		  <column name="paidfor"  type="varchar" size="10" required="true" description="RC:reservation charge,FP:fullpayment,PP:partpayment,In:installment"/>
+		  <column name="paymenttype" type="integer" required="true" description="paymenttype 1=cash,2=cheque,..."/>
+		  <column name="paidamount" type="double" required="true" description="paid amount"/>
+                  <column name="installment_no" type="integer" required="true" description="installment number"/>
+                  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+          <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		  
+		  <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		 
+		   <foreign-key foreignTable="location">
+   			<reference
+     			local="locationcode"
+     			foreign="locationcode"/>
+ 		  </foreign-key>
+ 		  
+ 		   <foreign-key foreignTable="project">
+   			<reference
+     			local="projectcode"
+     			foreign="projectcode"/>
+ 		   </foreign-key>	
+ 		  
+ 		   <foreign-key foreignTable="customerdetails">
+   			<reference
+     			local="customercode"
+     			foreign="customercode"/>
+ 		  </foreign-key>
+ 		  
+ 		  <foreign-key foreignTable="sales">
+   			<reference
+     			local="salerefno"
+     			foreign="refno"/>
+ 		  </foreign-key>	
+ 		   	
+		</table>
+		
+		 <!-- ############################ payment plan ####################################-->
+		<table name="paymentplan" description="payment plans for houses in a project">
+
+		  <column name="refno" type="integer" autoIncrement="true" required="true" primaryKey="true" description="reference number"/>	 
+		  <column name="projectcode" type="integer" required="true" description="project code"/>
+		  <column name="nofinstallments" type="integer" required="true" description="number of installments"/>
+		  <column name="description" type="varchar" size="150" required="true" description="payment plan description"/>
+		  <column name="installamount" type="double" required="true" description="Installment amount"/>
+		  <column name="rsvfee" type="double" required="true" description="Reservation Fee"/>
+		  <column name="downpayment" type="double" required="true" description="Downpayment"/>
+		  <column name="bankloan" type="double" default="0" description="Bank Loan"/>
+		  <column name="adtnlland" type="double" default="0" description="Additional Land Cost"/>
+		  <column name="totalpayable" type="double" required="true" description="Total Amount Payable (nofinstallments * installamount)"/>
+		  	  		  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+          <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		  
+		  <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		 
+                  <column name="devechargers1" type="double" required="false" description="devechargers1"/>
+                  <column name="devechargers2" type="double" required="false" description="devechargers2"/>
+                  <column name="infrastructure" type="double" required="false" description="infrastructure"/>
+                  <column name="occupation" type="double" required="false" description="occupation"/>
+		   <foreign-key foreignTable="project">
+   			<reference
+     			local="projectcode"
+     			foreign="projectcode"/>
+ 		   </foreign-key>	
+ 		  
+		</table> 	    		
+		
+		
+		 <!-- ############################ Sales ####################################-->
+		<table name="sales" description="house sales of projects">
+			
+		  <column name="refno" type="integer" autoIncrement="true" required="true" primaryKey="true" description="reference number"/>
+		  
+		  <column name="customercode" type="integer" required="true" description="customer code"/>
+		  <column name="locationcode" type="integer" required="true" description="Location Code"/>	 
+		  <column name="projectcode" type="integer" required="true" description="project code"/>
+		  <column name="blockrefnumber" type="integer" required="true" description="block reference number"/>
+		  <column name="payplanrefno" type="integer" required="true" description="payment plan reference number"/>
+		  
+		  <!-- in case the payment plan record is modified or deleted they are duplicated here -->
+		  <column name="nofinstallments" type="integer" required="true" description="number of installments"/>
+		  <column name="description" type="varchar" size="150" required="true" description="payment plan description"/>
+		  <column name="installamount" type="double" required="true" description="Installment amount"/>
+		  <column name="totalpayable" type="double" required="true" description="Total Amount Payable (nofinstallments * installamount)"/>
+		  
+		  <column name="paymentduedate" type="integer" required="false" description="Payment due day (day of month)"/>
+		  
+		  <column name="agrementstartdate" type="date" required="false" description="agreement start date"/>
+		  <column name="agrementfinishdate" type="date" required="false" description="agreement finish date"/>
+		  <column name="saletype" type="boolean" default="false" description="0:office,1:online"/>
+		  
+		  <column name="salerightoff_amt" type="float" default="0" description="Sale Right Off Amount (discount on full settlement)"/>
+		  <column name="salerightoff_status" type="boolean" default="false" description="Sale Right Off Status"/>
+		  <column name="salerightoff_comment" type="longvarchar" required="false" description="remarks of rightoff"/>
+		  		  	  		  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+		  
+          <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		  
+		  <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		 
+		   <foreign-key foreignTable="customerdetails">
+   		    <reference
+     			local="customercode"
+     			foreign="customercode"/>
+ 		   </foreign-key>
+ 		   
+ 		    <foreign-key foreignTable="projectdetails">
+   		    <reference
+     			local="blockrefnumber"
+     			foreign="refno"/>
+ 		   </foreign-key>
+ 		   
+ 		   <foreign-key foreignTable="paymentplan">
+   		    <reference
+     			local="payplanrefno"
+     			foreign="refno"/>
+ 		   </foreign-key>
+ 		   
+		   <foreign-key foreignTable="project">
+   			<reference
+     			local="projectcode"
+     			foreign="projectcode"/>
+ 		   </foreign-key>
+ 		   
+ 		   <foreign-key foreignTable="location">
+   			<reference
+     			local="locationcode"
+     			foreign="locationcode"/>
+ 		   </foreign-key>		
+ 		  
+		</table> 	    		
+		
+		 <!-- ############################ Refunds ####################################-->
+		<table name="refunds" description="house sales of projects">
+			
+		  <column name="refno" type="integer" autoIncrement="true" required="true" primaryKey="true" description="reference number"/>
+		   
+		  <column name="salerefno" type="integer" required="true" description="sale reference number"/>
+		  <column name="customercode" type="integer" required="true" description="customer code"/>
+		  <column name="locationcode" type="integer" required="true" description="Location Code"/>	 
+		  <column name="projectcode" type="integer" required="true" description="project code"/>
+		  <column name="blockrefnumber" type="integer" required="true" description="block reference number"/>
+		  <column name="payplanrefno" type="integer" required="true" description="payment plan reference number"/>
+		  <column name="refundamount" type="double" required="true" description="Amount Refunded"/>
+		  <column name="refundate" type="date" required="false" description="refund Date"/>
+		  
+		  <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+          <column name="deletedby" type="integer" required="false" description="Deleted by"/>
+		  <column name="deleteddate" type="date" required="false" description="Deleted Date"/>
+		  <column name="deletedtime" type="time" required="false" description="Deleted Time"/>
+		   
+          <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  
+		  <column name="lastmodifiedby" type="integer" required="false" description="Last modified by"/>
+		  <column name="lastmodifieddate" type="date" required="false" description="Last modified date"/>
+		  <column name="lastmodifiedtime" type="time" required="false" description="Last modified time"/>
+		 
+		 
+		   <foreign-key foreignTable="customerdetails">
+   		    <reference
+     			local="customercode"
+     			foreign="customercode"/>
+ 		   </foreign-key>
+ 		   
+ 		    <foreign-key foreignTable="projectdetails">
+   		    <reference
+     			local="blockrefnumber"
+     			foreign="refno"/>
+ 		   </foreign-key>
+ 		  
+		   <foreign-key foreignTable="project">
+   			<reference
+     			local="projectcode"
+     			foreign="projectcode"/>
+ 		   </foreign-key>
+ 		   
+ 		   <foreign-key foreignTable="location">
+   			<reference
+     			local="locationcode"
+     			foreign="locationcode"/>
+ 		   </foreign-key>		
+ 		  
+ 		  <foreign-key foreignTable="sales">
+   			<reference
+     			local="salerefno"
+     			foreign="refno"/>
+ 		   </foreign-key>	
+		</table> 	    		
+		
+		
+		   <table name="customer_receiptmethodofpayment" description="Receipt -Method of payment">
+             <column name="refno" type="integer" autoIncrement="true" required="true" primaryKey="true" description="Record Referance Number"/>  
+             <column name="receiptno" type="integer" required="true" description="Receipt Number"/>
+
+			 <column name="receiptstatus" type="varchar" size="2" required="true" description="Receipt Status CA=Cash; CH=Cheque; BD=Bank Deposit"/>
+			 <column name="bank" type="varchar" size="10" required="true" description="Bank Short Name"/>
+			 <column name="chequnumber" type="varchar" size="20" required="true" description="Cheque Number"/>
+			 <column name="chequedate" type="date" required="true" description="Cheque Date"/>
+		  	 <column name="amount" type="double" required="false" description="Amount"/>
+		  	   	  
+		     <column name="deleted" type="boolean" default="false" description="Record deleted"/>
+
+             <foreign-key foreignTable="customerreceipts">
+   			     <reference
+     			    local="receiptno"
+     			    foreign="receiptno"/>
+ 		     </foreign-key> 
+ 	    </table>
+		
+		
+		
+		<!-- ############################ payment plan ####################################-->
+		<table name="tranferedbloks" description="Transfered Blocks Log Table">
+
+		  <column name="refno" type="integer" autoIncrement="true" required="true" primaryKey="true" description="reference number"/>	 
+		  <column name="customercode" type="integer" required="true" description="customer code"/>
+		  <column name="salerefno" type="integer" required="true" description="sale reference number"/>
+		  <column name="blockrefnumber_previous" type="integer" required="true" description="previous block reference number"/>
+		  <column name="blockrefnumber_current" type="integer" required="true" description="new block reference number"/>
+		  <column name="currentblock_previouscustomer" type="integer" required="true" description="previous customer of the current block"/>
+		  		  
+		  <column name="other1" type="integer" required="false" description="reserved int type"/>
+		  <column name="other2" type="double" required="false" description="reserved double type"/>
+		  <column name="other3" type="varchar" size="150" required="false" description="reserved varchar"/>
+		 		  	  		  
+		  <column name="addedby" type="integer" required="false" description="Added by"/>
+		  <column name="addeddate" type="date" required="false" description="Added date"/>
+		  <column name="addedtime" type="time" required="false" description="Added time"/>
+		  
+		 
+		   <foreign-key foreignTable="customerdetails">
+   			<reference
+     			local="customercode"
+     			foreign="customercode"/>
+ 		   </foreign-key>
+ 		   
+ 		   <foreign-key foreignTable="sales">
+   			<reference
+     			local="salerefno"
+     			foreign="refno"/>
+ 		   </foreign-key>	
+ 		  
+		</table> 	    		
+		
+		
+
+                <table name="blockedips" description="Blockec Online Clients IP Addresses">
+		  <column name="refno" type="integer" autoIncrement="true" required="true" primaryKey="true" description="reference number"/>	 
+		  <column name="blocked_ip" type="varchar" size="200" required="true" description="Clients Ip Address"/>
+                  <column name="blocked_email" type="varchar" size="200" required="true" description="blocked email"/>
+                  <column name="status" type="boolean" default="true" description="true:blocked,false:unblocked"/>
+                </table>
+                
+                
+                <table name="upcomprjctsregister" description="Upcoming Projects Registrations">
+		  <column name="refno" type="integer" autoIncrement="true" required="true" primaryKey="true" description="reference number"/>	 
+		  <column name="uid" type="integer" required="true" description="Userid"/>
+                  <column name="upcprojectid" type="integer" required="true" description="Upcoming Project Id"/>
+                  <column name="upcprojectname" type="varchar" size="200" required="true" description="Upcoming Project Name"/>
+                  <column name="status" type="boolean" default="true" description="optional"/>
+                  
+                  <foreign-key foreignTable="user">
+   			<reference
+     			local="uid"
+     			foreign="uid"/>
+ 		   </foreign-key>
+                </table>
+                
+                  
+		<!-- ###### End: OFFICE  Data set ##### -->	
+</database>

@@ -1,0 +1,11 @@
+pinnacleadmin 2011-12-28 08:36:40 HomePageAction_view2 127.0.0.1
+pinnacleadmin 2011-12-28 08:36:55 ProjectDetailsAction_list 127.0.0.1
+pinnacleadmin 2011-12-28 08:36:59 ProjectDetailsAction_list 127.0.0.1
+pinnacleadmin 2011-12-28 08:37:00 ProjectDetailsAction_list 127.0.0.1
+pinnacleadmin 2011-12-28 08:37:04 PaymentPlanListAction_list 127.0.0.1
+pinnacleadmin 2011-12-28 08:37:06 PaymentPlanListAction_list 127.0.0.1
+pinnacleadmin 2011-12-28 08:37:17 SalesListAction_list 127.0.0.1
+pinnacleadmin 2011-12-28 08:39:23 SalesListAction_list 127.0.0.1
+pinnacleadmin 2011-12-28 08:47:22 SalesListAction_list 127.0.0.1
+pinnacleadmin 2011-12-28 08:51:25 HomePageAction_view 127.0.0.1
+pinnacleadmin 2011-12-28 03:30:11 AddNewSaleAction_form 127.0.0.1

@@ -1,0 +1,8 @@
+admin 2015-06-11 10:15:54 HomePageAction_view2 127.0.0.1
+admin 2015-06-11 10:16:00 ReportsAction_list 127.0.0.1
+admin 2015-06-11 10:16:10 BlockAllocationReportAction_form 127.0.0.1
+admin 2015-06-11 10:19:47 BlockAllocationReportAction_form 127.0.0.1
+admin 2015-06-11 10:21:06 BlockAllocationReportAction_form 127.0.0.1
+admin 2015-06-11 10:27:57 BlockAllocationReportAction_form 127.0.0.1
+admin 2015-06-11 10:29:02 BlockAllocationReportAction_form 127.0.0.1
+admin 2015-06-11 10:29:53 BlockAllocationReportAction_form 127.0.0.1

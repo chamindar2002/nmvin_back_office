@@ -1,0 +1,4 @@
+admin 2012-05-17 03:11:52 HomePageAction_view2 127.0.0.1
+admin 2012-05-17 03:11:55 SalesListAction_list 127.0.0.1
+admin 2012-05-17 03:12:03 CustomerDetailsAction_form 127.0.0.1
+admin 2012-05-17 03:12:06 CustomerDetailsAction_form 127.0.0.1

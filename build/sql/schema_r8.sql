@@ -1,0 +1,1 @@
+ALTER TABLE `nmwndb`.`sales` MODIFY COLUMN `salerightoff_comment` LONGTEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL COMMENT 'remarks of rightoff';

@@ -1,0 +1,11 @@
+admin 2015-07-24 10:39:13 HomePageAction_view2 127.0.0.1
+admin 2015-07-24 10:39:19 ReportsAction_list 127.0.0.1
+admin 2015-07-24 10:39:34 ProjectSummaryReportAction_print 127.0.0.1
+admin 2015-07-24 10:40:32 ReminderLettersReportAction_print 127.0.0.1
+admin 2015-07-24 10:40:55 BlockAllocationDetailReportAction_print 127.0.0.1
+admin 2015-07-24 10:41:13 BlockAllocationDetailReportAction_print 127.0.0.1
+admin 2015-07-24 10:52:41 ReportsAction_list 127.0.0.1
+admin 2015-07-24 10:56:19 ReportsAction_list 127.0.0.1
+admin 2015-07-24 11:05:09 ReportsAction_list 127.0.0.1
+admin 2015-07-24 11:32:46 ReportsAction_list 127.0.0.1
+admin 2015-07-24 11:34:52 ReportsAction_list 127.0.0.1

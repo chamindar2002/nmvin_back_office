@@ -1,0 +1,5 @@
+admin 2015-06-30 07:01:35 HomePageAction_view2 127.0.0.1
+admin 2015-06-30 07:01:41 HomePageAction_view 127.0.0.1
+admin 2015-06-30 07:01:45 SalesListAction_list 127.0.0.1
+admin 2015-06-30 07:01:52 AddNewSaleAction_form 127.0.0.1
+admin 2015-06-30 07:02:04 AddNewSaleAction_form 127.0.0.1

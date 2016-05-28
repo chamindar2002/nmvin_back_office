@@ -1,0 +1,14 @@
+pinnacleadmin 2012-04-24 02:48:56 HomePageAction_view2 127.0.0.1
+pinnacleadmin 2012-04-24 02:48:58 ReceiptsListAction_list 127.0.0.1
+pinnacleadmin 2012-04-24 02:49:03 ReceiptsListAction_list 127.0.0.1
+pinnacleadmin 2012-04-24 02:49:08 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 02:51:31 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 02:52:07 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 02:53:36 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 02:53:59 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 02:59:30 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 03:00:28 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 03:01:01 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 03:01:46 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 03:04:01 PrintReceiptAction_print 127.0.0.1
+pinnacleadmin 2012-04-24 03:06:08 PrintReceiptAction_print 127.0.0.1

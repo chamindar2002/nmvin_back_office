@@ -1,0 +1,15 @@
+admin 2012-06-05 11:18:59 HomePageAction_view2 127.0.0.1
+admin 2012-06-05 11:19:05 HomePageAction_view 127.0.0.1
+admin 2012-06-05 11:19:08 ProjectDetailsAction_list 127.0.0.1
+admin 2012-06-05 11:19:10 ProjectDetailsAction_list 127.0.0.1
+admin 2012-06-05 11:26:58 CustomerDetailsAction_form 127.0.0.1
+admin 2012-06-05 11:27:04 CustomerDetailsAction_form 127.0.0.1
+admin 2012-06-05 11:27:10 SalesListAction_list 127.0.0.1
+admin 2012-06-05 11:32:26 SalesListAction_list 127.0.0.1
+admin 2012-06-05 11:32:34 SalesListAction_list 127.0.0.1
+admin 2012-06-05 11:32:54 CustomerDetailsAction_form 127.0.0.1
+admin 2012-06-05 11:33:05 CustomerDetailsAction_form 127.0.0.1
+admin 2012-06-05 11:33:08 SalesListAction_list 127.0.0.1
+admin 2012-06-05 11:34:38 CustomerDetailsAction_form 127.0.0.1
+admin 2012-06-05 11:34:44 CustomerDetailsAction_form 127.0.0.1
+admin 2012-06-05 11:34:46 SalesListAction_list 127.0.0.1

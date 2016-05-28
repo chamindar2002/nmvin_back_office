@@ -1,0 +1,9 @@
+cladmin 2015-03-27 08:40:37 HomePageAction_view2 127.0.0.1
+cladmin 2015-03-27 08:40:43 ReceiptsListAction_list 127.0.0.1
+cladmin 2015-03-27 08:40:46 AddNewReceiptAction_form 127.0.0.1
+cladmin 2015-03-27 08:40:50 AddNewReceiptAction_form 127.0.0.1
+cladmin 2015-03-27 08:41:03 PaymentPlanListAction_list 127.0.0.1
+cladmin 2015-03-27 08:41:06 NewPaymentPlanAction_form 127.0.0.1
+cladmin 2015-03-27 08:41:27 PaymentPlanListAction_list 127.0.0.1
+cladmin 2015-03-27 08:41:31 PaymentPlanListAction_list 127.0.0.1
+cladmin 2015-03-27 08:41:35 EditPaymentPlanAction_form 127.0.0.1

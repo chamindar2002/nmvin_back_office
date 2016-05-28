@@ -1,0 +1,7 @@
+admin 2012-05-15 10:52:09 HomePageAction_view2 127.0.0.1
+admin 2012-05-15 10:52:11 ReportsAction_list 127.0.0.1
+admin 2012-05-15 10:52:23 ReportsAction_list 127.0.0.1
+admin 2012-05-15 10:57:43 ReportsAction_list 127.0.0.1
+admin 2012-05-15 10:58:43 ReportsAction_list 127.0.0.1
+admin 2012-05-15 10:58:53 ReportsAction_list 127.0.0.1
+admin 2012-05-15 10:59:01 ReportsAction_list 127.0.0.1

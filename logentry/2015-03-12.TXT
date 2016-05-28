@@ -1,0 +1,7 @@
+pinnacleadmin 2015-03-12 10:51:25 HomePageAction_view 127.0.0.1
+pinnacleadmin 2015-03-12 10:51:37 HomePageAction_view 127.0.0.1
+pinnacleadmin 2015-03-12 10:52:37 HomePageAction_view 127.0.0.1
+pinnacleadmin 2015-03-12 10:53:24 HomePageAction_view 127.0.0.1
+pinnacleadmin 2015-03-12 10:53:44 HomePageAction_view 127.0.0.1
+pinnacleadmin 2015-03-12 11:55:37 HomePageAction_view 127.0.0.1
+pinnacleadmin 2015-03-12 12:06:32 HomePageAction_view 127.0.0.1

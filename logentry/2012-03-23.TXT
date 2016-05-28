@@ -1,0 +1,8 @@
+pinnacleadmin 2012-03-23 09:17:06 HomePageAction_view2 127.0.0.1
+pinnacleadmin 2012-03-23 09:17:15 ReceiptsListAction_list 127.0.0.1
+pinnacleadmin 2012-03-23 09:17:20 AddNewReceiptAction_form 127.0.0.1
+pinnacleadmin 2012-03-23 09:17:24 AddNewReceiptAction_form 127.0.0.1
+pinnacleadmin 2012-03-23 11:29:42 ReportsAction_list 127.0.0.1
+pinnacleadmin 2012-03-23 11:29:51 ReportsAction_list 127.0.0.1
+pinnacleadmin 2012-03-23 11:29:57 BlockAllocationReportAction_form 127.0.0.1
+pinnacleadmin 2012-03-23 01:26:51 BlockAllocationReportAction_form 127.0.0.1

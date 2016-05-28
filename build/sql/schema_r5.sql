@@ -1,0 +1,1 @@
+ALTER TABLE `nmwndb`.`paymentplan` ADD COLUMN `adtnlland` DOUBLE DEFAULT 0 COMMENT 'Additional Land Cost' AFTER `bankloan`;

@@ -1,0 +1,15 @@
+pinnacleadmin 2012-10-11 02:21:26 HomePageAction_view 127.0.0.1
+pinnacleadmin 2012-10-11 02:21:35 ReportsAction_list 127.0.0.1
+pinnacleadmin 2012-10-11 02:21:55 BlockAllocationDetailReportAction_print 127.0.0.1
+pinnacleadmin 2012-10-11 02:22:39 BlockAllocationDetailReportAction_print 127.0.0.1
+pinnacleadmin 2012-10-11 02:23:24 BlockAllocationDetailReportAction_print 127.0.0.1
+pinnacleadmin 2012-10-11 02:30:22 BlockAllocationDetailReportAction_print 127.0.0.1
+pinnacleadmin 2012-10-11 02:31:11 BlockAllocationDetailReportAction_print 127.0.0.1
+pinnacleadmin 2012-10-11 02:32:26 ProjectDetailsAction_list 127.0.0.1
+pinnacleadmin 2012-10-11 02:32:30 ProjectDetailsAction_list 127.0.0.1
+pinnacleadmin 2012-10-11 02:33:50 ReportsAction_list 127.0.0.1
+pinnacleadmin 2012-10-11 02:34:01 BlockAllocationDetailReportAction_print 127.0.0.1
+pinnacleadmin 2012-10-11 02:41:45 ReportsAction_list 127.0.0.1
+pinnacleadmin 2012-10-11 02:41:57 BlockAllocationDetailReportAction_print 127.0.0.1
+pinnacleadmin 2012-10-11 02:42:30 ProjectDetailsAction_list 127.0.0.1
+pinnacleadmin 2012-10-11 02:42:35 ProjectDetailsAction_list 127.0.0.1
