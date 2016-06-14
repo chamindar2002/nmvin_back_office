@@ -1,0 +1,10 @@
+admin 2016-05-30 05:58:13 HomePageAction_view2 127.0.0.1
+admin 2016-05-30 05:58:16 SalesListAction_list 127.0.0.1
+admin 2016-05-30 05:58:45 SalesListAction_list 127.0.0.1
+admin 2016-05-30 05:58:57 EditSalesAction_form 127.0.0.1
+admin 2016-05-30 05:59:17 EditSalesAction_form 127.0.0.1
+admin 2016-05-30 05:59:20 SalesListAction_list 127.0.0.1
+admin 2016-05-30 05:59:27 SalesListAction_list 127.0.0.1
+admin 2016-05-30 05:59:37 EditSalesAction_form 127.0.0.1
+admin 2016-05-30 05:59:39 EditSalesAction_form 127.0.0.1
+admin 2016-05-30 05:59:42 SalesListAction_list 127.0.0.1

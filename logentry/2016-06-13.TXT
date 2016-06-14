@@ -1,0 +1,5 @@
+admin 2016-06-13 03:21:08 HomePageAction_view2 127.0.0.1
+admin 2016-06-13 03:21:13 HomePageAction_view 127.0.0.1
+admin 2016-06-13 03:21:16 ReportsAction_list 127.0.0.1
+admin 2016-06-13 03:21:22 BlockAllocationDetailReportAction_print 127.0.0.1
+admin 2016-06-13 03:21:57 BlockAllocationDetailReportAction_print 127.0.0.1

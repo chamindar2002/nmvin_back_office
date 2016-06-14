@@ -110,7 +110,7 @@ require_once 'reports/report_sql.php';
                                                  * if its a sold block and dues = 0 then display as 'settled' on the report
                                                  * $totalpayable != 0 means its a sold block
                                                  */
-                                                if($totalpayable != 0 && ($totalpayable-$receipttotal) == 0){
+                                                if($totalpayable != 0 && ($totalpayable-$receipttotal) <= 0){
                                                     $pdf->Cell(25,4,'SETTLED',0,1,'R');
                                                 }else{
                                                     /*
@@ -279,7 +279,7 @@ require_once 'reports/report_sql.php';
                                                  * if its a sold block and dues = 0 then display as 'settled' on the report
                                                  * $totalpayable != 0 means its a sold block
                                                  */
-                                                if($totalpayable != 0 && ($totalpayable-$receipttotal) == 0){
+                                                if($totalpayable != 0 && ($totalpayable-$receipttotal) <= 0){
                                                     $pdf->Cell(25,4,'SETTLED',0,0,'R');
                                                 }else{
                                                     /*

@@ -1,0 +1,4 @@
+admin 2016-06-01 06:29:12 HomePageAction_view2 127.0.0.1
+admin 2016-06-01 06:29:14 SalesListAction_list 127.0.0.1
+admin 2016-06-01 06:29:21 SalesListAction_list 127.0.0.1
+admin 2016-06-01 06:29:41 SalesListAction_list 127.0.0.1

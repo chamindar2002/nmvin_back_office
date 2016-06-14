@@ -10,8 +10,8 @@ $appName = "Nimawin Developers";
 // No trailing '/' please
 if (PHP_OS == "Linux") {
 	//$appDirectory = "/var/www/vhosts/goldenbirdlanka.com/subdomains/backoffice/httpdocs";
-	$appDirectory="/home/ngp/nimavingreenpark.com/backoffice";
-  	$appWebPath = "http://backoffice.nimavingreenpark.com";
+	$appDirectory="/var/www/html/nmvin_back_office";
+  	$appWebPath = "http://nimavin-backoffice.dev";
   	
 } else {
 	// Windows - developer machines

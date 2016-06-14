@@ -1,0 +1,8 @@
+admin 2016-06-08 08:59:37 HomePageAction_view2 127.0.0.1
+admin 2016-06-08 08:59:42 HomePageAction_view 127.0.0.1
+admin 2016-06-08 09:00:17 HomePageAction_view2 127.0.0.1
+admin 2016-06-08 09:00:23 HomePageAction_view 127.0.0.1
+admin 2016-06-08 09:01:13 NewBlockSwapAction_form 127.0.0.1
+admin 2016-06-08 09:01:22 NewBlockSwapAction_form 127.0.0.1
+admin 2016-06-08 09:12:03 NewBlockSwapAction_form 127.0.0.1
+admin 2016-06-08 09:12:12 NewBlockSwapAction_form 127.0.0.1
