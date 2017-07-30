@@ -1,5 +1,5 @@
 <?php
-error_reporting(2);
+//error_reporting(2);
 //Set Default Time Zone
 ini_set('date.timezone', 'Asia/Colombo'); 
 
