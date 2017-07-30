@@ -14,8 +14,8 @@ require_once 'build/conf/db_conn.php';
 class report_sql {
 
     public function get_location_name($id) {
-        $mysql_query = mysql_query("SELECT `locationname` FROM `location` WHERE `locationcode`=$id");
-        $mysql_fetch_array = mysql_fetch_array($mysql_query, MYSQL_ASSOC);
+        $mysql_query = mysqli_query("SELECT `locationname` FROM `location` WHERE `locationcode`=$id");
+        $mysql_fetch_array = mysqli_fetch_array($mysql_query, MYSQL_ASSOC);
         return $mysql_fetch_array['locationname'];
     }
 

@@ -6,8 +6,8 @@ $server="127.0.0.1";
 
 
 
-$opn_Connection = mysql_connect($server,$user_name,$pwd);
-$opn_Dbf = mysql_select_db($database, $opn_Connection);
+$opn_Connection = mysqli_connect($server,$user_name,$pwd);
+$opn_Dbf = mysqli_select_db($database, $opn_Connection);
 
 if ($opn_Connection) {
    if ($opn_Dbf){
@@ -47,7 +47,7 @@ if ($opn_Connection) {
 			
             $SQLstr_pHeader = "INSERT INTO rmsupplier(suppliername,address1,address2,address3,contactperson,telephonegen1,telephonegen2,fax1,addedby,addeddate,addedtime)
 	      	                                           values ('$SupplierName','$Address1','$Address2','$Address3','$Contact','$OfficePhone1','$OfficePhone2','$Fax','$user','$date_today','$time_now')";
-			$result = mysql_query($SQLstr_pHeader) or die ('Error');	                           
+			$result = mysqli_query($SQLstr_pHeader) or die ('Error');	                           
 			
 	      }  
 	      echo "Loading invoice details finished\n";    
@@ -58,8 +58,8 @@ if ($opn_Connection) {
       echo "Database Not Found"	;
    }  
 } else {
-   echo "Connection Could Not Be Establish".mysql_error(); 	        
+   echo "Connection Could Not Be Establish".mysqli_error(); 	        
 }
-mysql_close($opn_Connection);
+mysqli_close($opn_Connection);
 
 ?>

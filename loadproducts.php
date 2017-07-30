@@ -6,8 +6,8 @@ $server="127.0.0.1";
 
 
 
-$opn_Connection = mysql_connect($server,$user_name,$pwd);
-$opn_Dbf = mysql_select_db($database, $opn_Connection);
+$opn_Connection = mysqli_connect($server,$user_name,$pwd);
+$opn_Dbf = mysqli_select_db($database, $opn_Connection);
 
 if ($opn_Connection) {
    if ($opn_Dbf){
@@ -41,7 +41,7 @@ if ($opn_Connection) {
 			
             $SQLstr_pHeader = "INSERT INTO fgproducts(description,wsprice,dbprice,sellingprice,fgcategorycode,fgsubcategorycode,addedby,addeddate,addedtime)
 	      	                                           values ('$ProductName','$WSprice','$WSprice','$Sprice','$Category','$SubCategory','$user','$date_today','$time_now')";
-			$result = mysql_query($SQLstr_pHeader) or die ('Error');	                           
+			$result = mysqli_query($SQLstr_pHeader) or die ('Error');	                           
 			
 	      }  
 	      echo "Loading invoice details finished\n";    
@@ -52,8 +52,8 @@ if ($opn_Connection) {
       echo "Database Not Found"	;
    }  
 } else {
-   echo "Connection Could Not Be Establish".mysql_error(); 	        
+   echo "Connection Could Not Be Establish".mysqli_error(); 	        
 }
-mysql_close($opn_Connection);
+mysqli_close($opn_Connection);
 
 ?>

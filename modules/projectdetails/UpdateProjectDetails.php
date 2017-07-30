@@ -19,7 +19,7 @@ if(isset($_POST['key'])){
            if($row == 5){
                  $query = "UPDATE projectdetails SET blocknumber='$query_data[2]',
                  blocksize='$query_data[3]',blockprice='$query_data[4]',reservestatus='$query_data[5]' WHERE refno='$query_data[1]'"; 
-                 $result = mysql_query($query);
+                 $result = mysqli_query($query);
                  //$num_rows = mysql_num_rows($result);
                 // echo $num_rows;
                  if($result){
@@ -46,7 +46,7 @@ if(isset($_POST['key'])){
 if(isset($_POST['block_no'])){
     $block_no = $_POST['block_no'];
     $query = "UPDATE projectdetails SET deleted='1' WHERE refno='$block_no'";
-    $mysql_query = mysql_query($query);
+    $mysql_query = mysqli_query($query);
     
     if($mysql_query){
          echo $block_no."\t Block Removed Successfully";
@@ -60,9 +60,9 @@ if(isset($_POST['block_no'])){
 if(isset($_POST['project_code'])){
    $get_project_code = $_POST['project_code'];
    $query = "SELECT locationcode FROM  projectdetails WHERE projectcode='$get_project_code' LIMIT 1";
-   $mysql_query = mysql_query($query);
+   $mysql_query = mysqli_query($query);
    $result_rows= 0 ;
-    while ($row1 = mysql_fetch_array($mysql_query)) {
+    while ($row1 = mysqli_fetch_array($mysql_query)) {
         $tvy_rows = $_POST['tvy_rows'];
         $tvy_rows++;
        $locationcode =  $row1['locationcode'];
@@ -77,7 +77,7 @@ if(isset($_POST['project_code'])){
             $new_query = "INSERT INTO `projectdetails`(`locationcode`,`projectcode`,`blocknumber`,`blocksize`,`blockprice`,`reservestatus`) 
                 VALUES ($locationcode,$get_project_code,'$txt_block_no',$txt_block_size,$txt_block_price,$block_combo)";
             
-            $insert = mysql_query($new_query);
+            $insert = mysqli_query($new_query);
             
             if($insert){
                 $result_rows++;

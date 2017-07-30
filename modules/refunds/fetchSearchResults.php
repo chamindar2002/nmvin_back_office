@@ -7,13 +7,13 @@ if(isset($_GET['id'])){
     $id = $_GET['id'];
     
     $query = "SELECT * FROM view_customer_refund WHERE passportno = '$id' LIMIT 1";
-    $mysql_query = mysql_query($query);
-    $rows = mysql_num_rows($mysql_query);
+    $mysql_query = mysqli_query($query);
+    $rows = mysqli_num_rows($mysql_query);
     
     sleep(1);
     if ($rows != 0) {
      
-        while ($row = mysql_fetch_assoc($mysql_query)) {
+        while ($row = mysqli_fetch_assoc($mysql_query)) {
             
             $block = RefundsManager::getInstance()->getBlockNoByPK($row['blockrefnumber']);
             $project = RefundsManager::getInstance()->getProjectByPK($row['projectcode']);
