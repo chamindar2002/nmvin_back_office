@@ -9,9 +9,9 @@ $conf = array (
       'adapter' => 'mysql',
       'connection' => 
       array (
-        'dsn' => 'mysql:host=localhost;dbname=nmwndb2',
+        'dsn' => 'mysql:host=localhost;dbname=nmwndb',
         'user' => 'root',
-        'password' => '',
+        'password' => 'Ne0C@tx34',
       ),
     ),
     'default' => 'nmwndb',

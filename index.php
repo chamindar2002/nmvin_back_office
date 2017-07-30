@@ -42,8 +42,12 @@ if ("$module" == "") {
 
 // Make sure the op is something we expect
 // Otherwise, other files will be included by a hacker
-if (! ereg("^[a-zA-Z0-9]+$", $module)) {
+/*if (! ereg("^[a-zA-Z0-9]+$", $module)) {
 	$module = "home";
+}*/
+
+if(! preg_replace("[^A-Za-z0-9]", "", strtolower($value['name']))){
+    $module = "home";
 }
 
 if (isset($_GET['a'])) {
