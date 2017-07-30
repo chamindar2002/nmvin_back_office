@@ -11,12 +11,12 @@ $appName = "Nimawin Developers";
 if (PHP_OS == "Linux") {
 	//$appDirectory = "/var/www/vhosts/goldenbirdlanka.com/subdomains/backoffice/httpdocs";
 	$appDirectory="/var/www/html/nmvin_back_office";
-  	$appWebPath = "http://nimavin-backoffice.dev";
+  	$appWebPath = "http://52.89.189.46/nmvin_back_office";
   	
 } else {
 	// Windows - developer machines
-	$appDirectory = "C:/xampp/htdocs/nimavin/trunk/web";
-	$appWebPath = "http://localhost/nimavin/trunk/web/";
+	$appDirectory = "G:/my_php_projects/propel/nmvin_back_office";
+	$appWebPath = "http://nimavin-back-office.dev";
 }
 
 /*
