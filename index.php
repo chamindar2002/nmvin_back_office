@@ -4,7 +4,7 @@
 ini_set('date.timezone', 'Asia/Colombo'); 
 
 
-
+define('ENFORCE_AUTHORIZATION', FALSE);
 
 // Some utility functions
 include_once "utils/pathmanager.php";
@@ -46,7 +46,7 @@ if ("$module" == "") {
 	$module = "home";
 }*/
 
-if(! preg_replace("[^A-Za-z0-9]", "", strtolower($value['name']))){
+if(! preg_replace("[^A-Za-z0-9]", "", strtolower($module))){
     $module = "home";
 }
 
@@ -85,7 +85,7 @@ $actionClassName = $action."Action";
 if (!isset($_SESSION[SYSTEMNAME.'sysid']) ){
 
 	if (UserManager::getInstance()->checkActionPermission($module, $actionClassName)) {
-         
+       
 	$actionFile = $module."/".$actionClassName.".php"; 
 
 	require_once($actionFile);
