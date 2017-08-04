@@ -1,0 +1,1 @@
+ALTER TABLE `customerreceipts` ADD `installment_no` INT NOT NULL DEFAULT '1' AFTER `paidfor`;

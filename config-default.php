@@ -11,7 +11,7 @@ $appName = "Nimawin Developers";
 if (PHP_OS == "Linux") {
 	//$appDirectory = "/var/www/vhosts/goldenbirdlanka.com/subdomains/backoffice/httpdocs";
 	$appDirectory="/var/www/html/nmvin_back_office";
-  	$appWebPath = "http://52.89.189.46/nmvin_back_office";
+  	$appWebPath = "http://34.208.192.238/nmvin_back_office";
   	
 } else {
 	// Windows - developer machines
