@@ -1,6 +1,6 @@
 <?php
 
-$app = "$_SERVER[DOCUMENT_ROOT]";
+$app = "$_SERVER[DOCUMENT_ROOT]/nmvin_back_office";
 $pathaction = "$app/modules/action/Action.php";
 $pathpmd = "$app/modules/projectdetails/ProjectDetailsManager.php";
 $pathcustomer = "$app/modules/customer/customerFunctions.php";
