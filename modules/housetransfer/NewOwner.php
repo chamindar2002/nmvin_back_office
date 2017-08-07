@@ -12,12 +12,12 @@ $block_no = $_GET['blockno'];
       $mysql_num_rows++;
       $owner_no = "Owner : " . $mysql_num_rows;
       $query = "INSERT INTO transferdetails (cutomer_code, block_no,ownertype) VALUES ('$customer_code','$block_no','$owner_no')";
-     $mysql_query = mysqli_query($query) or die(mysql_error());
+     $mysql_query = mysqli_query($query) or die(mysqli_error());
   }  else {
       $mysql_num_rows = 1;
       $owner_no = "Owner : " . $mysql_num_rows;
       $query = "INSERT INTO transferdetails (cutomer_code, block_no,ownertype) VALUES ('$customer_code','$block_no','$owner_no')";
-      $mysql_query = mysqli_query($query) or die(mysql_error());
+      $mysql_query = mysqli_query($query) or die(mysqli_error());
   }
  
   $rows[0] = $owner_no;
