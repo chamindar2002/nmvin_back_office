@@ -1,0 +1,7 @@
+admin 2017-08-07 11:30:55 HomePageAction_view2 127.0.0.1
+admin 2017-08-07 11:34:21 ProjectDetailsAction_list 127.0.0.1
+admin 2017-08-07 12:06:36 NewOwnershipTranferAction_form 127.0.0.1
+admin 2017-08-07 12:13:05 NewOwnershipTranferAction_form 127.0.0.1
+admin 2017-08-07 12:20:00 ProjectDetailsAction_list 127.0.0.1
+admin 2017-08-07 12:20:02 ProjectDetailsAction_list 127.0.0.1
+admin 2017-08-07 12:26:13 ProjectDetailsAction_list 127.0.0.1

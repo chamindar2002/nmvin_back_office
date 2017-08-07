@@ -19,7 +19,7 @@ if(isset($_POST['key'])){
            if($row == 5){
                  $query = "UPDATE projectdetails SET blocknumber='$query_data[2]',
                  blocksize='$query_data[3]',blockprice='$query_data[4]',reservestatus='$query_data[5]' WHERE refno='$query_data[1]'"; 
-                 $result = mysqli_query($query);
+                 $result = mysqli_query($mysql_connect,$query);
                  //$num_rows = mysql_num_rows($result);
                 // echo $num_rows;
                  if($result){
@@ -35,7 +35,7 @@ if(isset($_POST['key'])){
     if($resulttype != 0){
         echo $resulttype."\t Project Details List Updated Successfully";
     }  else {
-         echo "An Error Occured Updating Project Details List";
+         echo "An Error Occured Updating Project Details List x";
     }
  /*for ($index = 0; $index < count($explode_data); $index++) {
      echo $explode_data[$index];
@@ -51,7 +51,7 @@ if(isset($_POST['block_no'])){
     if($mysql_query){
          echo $block_no."\t Block Removed Successfully";
     }  else {
-        echo "An Error Occured Updating Project Details List";
+        echo "An Error Occured Updating Project Details List y";
     }
     
 }
@@ -91,7 +91,7 @@ if(isset($_POST['project_code'])){
     if($result_rows != 0){
         echo $result_rows."\t Project Details List Updated Successfully";
     }  else {
-         echo "An Error Occured Updating Project Details List";
+         echo "An Error Occured Updating Project Details List z";
     }
     
 
