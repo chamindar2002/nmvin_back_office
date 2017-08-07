@@ -1,9 +1,11 @@
 <?php
 
-$app = "$_SERVER[DOCUMENT_ROOT]/nimavin/trunk/web";
+$app = "$_SERVER[DOCUMENT_ROOT]";
 $pathaction = "$app/modules/action/Action.php";
 $pathpmd = "$app/modules/projectdetails/ProjectDetailsManager.php";
 $pathcustomer = "$app/modules/customer/customerFunctions.php";
+
+//die($app);
 
 //$pathaction = "/var/www/nimavin/trunk/web/modules/action/Action.php";
 //$pathpmd = "/var/www/nimavin/trunk/web/modules/projectdetails/ProjectDetailsManager.php";
